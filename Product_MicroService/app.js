@@ -37,6 +37,6 @@ product.create({
 routes(app);
 
 app.listen(PORT, HOSTNAME, () => {
-    console.log(`Connected to port ${PORT}`);
+    console.log(`Product connected to port ${PORT}`);
     console.log(`GET request @ http://${HOSTNAME}:${PORT}/rest/v1/products`);
 })
