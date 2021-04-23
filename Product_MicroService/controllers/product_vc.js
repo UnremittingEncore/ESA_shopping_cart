@@ -10,4 +10,4 @@ function ProductsList(req,res){
     })
 }
 
-module.exports =   ProductsList;
+module.exports = ProductsList;
