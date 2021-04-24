@@ -3,8 +3,8 @@
 const controller = require('../controllers/cart_vc');
 
 module.exports = function(app) {
-    app.route('/rest/v1/users/100/cart')
+    app.route('/rest/v1/users/:uuid/cart')
        .get(controller.getListItems);
-    app.route('/rest/v1/users/qa-test-user/cart')
+    app.route('/rest/v1/users/:uuid/cart')
        .put(controller.updateCart);
 };

@@ -23,7 +23,7 @@ mongoose.connect(MONGO_CONNECTION_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   }) // Adding new mongo url parser
-  .then(() => console.log("Connected to database  cluster"))
+  .then(() => console.log("Connected to database cluster"))
   .catch((err) => console.log(err));
 
 routes(app);
@@ -45,5 +45,5 @@ cart.create({
 app.listen(PORT, ()=>{
     console.log(`Cart connected to port ${PORT}`);
     console.log(`PUT request @ http://${HOSTNAME}:${PORT}/rest/v1/users/100/cart`);
-    console.log(`GET request @ http://${HOSTNAME}:${PORT}/rest/v1/users/qa-test-user/cart`);
+    console.log(`GET request @ http://${HOSTNAME}:${PORT}/rest/v1/users/100/cart`);
 })

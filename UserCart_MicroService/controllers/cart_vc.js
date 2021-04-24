@@ -1,17 +1,17 @@
 const cart = require('../models/cart')
 const axios  = require('axios')
 
-
 const users = ["100" , "200", "300"];
 
+const HOSTNAME = process.env.HOSTNAME || "localhost";
+const PORT = process.env.PORT || 3001;
 
 var controllers = {
     updateCart: function(req, res) {
         var products = new Array()
         console.log(req.body)
-        if (users.includes(req.params.uuid)){
-                
-            axios.get(`http://${HOSTNAME}:${PORT}/rest/v1/products`).then(response => {
+        if (users.includes(req.params.uuid)){  
+            axios.get(`http://${HOSTNAME}:${PORT}/rest/v1/products`).then(response => {   
             products = response.data.items
             
             let obj = products.find(o => o.productId === req.body.productId);
